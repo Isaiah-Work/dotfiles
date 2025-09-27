@@ -1,0 +1,98 @@
+{
+    "telemetry.sqmId": "",
+    "telemetry.machineId": "094881b7314101d6f9eb413349c7ed3d55c988a7f1f3ed35addd3171b9b1fa0e",
+    "telemetry.devDeviceId": "a4cecf92-033a-4a27-9ed7-6e881bf36dad",
+    "backupWorkspaces": {
+        "workspaces": [],
+        "folders": [
+            {
+                "folderUri": "file:///home/sayi/.config/i3"
+            }
+        ],
+        "emptyWindows": []
+    },
+    "windowControlHeight": 50,
+    "profileAssociations": {
+        "workspaces": {
+            "file:///home/sayi/.config/i3": "__default__profile__",
+            "file:///home/sayi/i3_dotfiles/dotfiles/picom/.config/picom": "__default__profile__",
+            "file:///home/sayi/i3_dotfiles/dotfiles": "__default__profile__",
+            "file:///home/sayi/.config": "__default__profile__",
+            "file:///home/sayi/rofi_dotfiles/dotfiles/.config": "__default__profile__"
+        },
+        "emptyWindows": {}
+    },
+    "theme": "vs-dark",
+    "themeBackground": "#292d3e",
+    "windowSplash": {
+        "zoomLevel": 0,
+        "baseTheme": "vs-dark",
+        "colorInfo": {
+            "foreground": "#ffffff",
+            "background": "#292d3e",
+            "editorBackground": "#292d3e",
+            "titleBarBackground": "#25293a",
+            "titleBarBorder": "#2c3041",
+            "activityBarBackground": "#242839",
+            "activityBarBorder": "#2e3243",
+            "sideBarBackground": "#25293a",
+            "sideBarBorder": "#2c2f40",
+            "statusBarBackground": "#25293a",
+            "statusBarBorder": "#2c3041",
+            "statusBarNoFolderBackground": "#292d3e"
+        },
+        "layoutInfo": {
+            "sideBarSide": "right",
+            "editorPartMinWidth": 220,
+            "titleBarHeight": 35,
+            "activityBarWidth": 48,
+            "sideBarWidth": 0,
+            "auxiliaryBarWidth": 0,
+            "statusBarHeight": 0,
+            "windowBorder": false
+        }
+    },
+    "windowSplashWorkspaceOverride": {
+        "layoutInfo": {
+            "sideBarWidth": 266,
+            "auxiliaryBarWidth": 202,
+            "workspaces": {
+                "38303ab8cd915bf912c174f16e3fd251": {
+                    "sideBarVisible": false,
+                    "auxiliaryBarVisible": false
+                },
+                "a76afc93bcc1cea4c432fb016b31a5e1": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": true
+                },
+                "5d185300c1bb98184d5a99df14445cb6": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": true
+                },
+                "d6562da8f01b20b92f75ea104b3c457d": {
+                    "sideBarVisible": false,
+                    "auxiliaryBarVisible": false
+                },
+                "d3205d3b1490eb3a144ab56279db18bf": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": true
+                }
+            }
+        }
+    },
+    "windowsState": {
+        "lastActiveWindow": {
+            "folder": "file:///home/sayi/.config/i3",
+            "backupPath": "/home/sayi/.config/Code/Backups/02e5ed44fa2d0eb9508381e379eded2e",
+            "uiState": {
+                "mode": 1,
+                "x": 965,
+                "y": 15,
+                "width": 940,
+                "height": 1013,
+                "zoomLevel": 2
+            }
+        },
+        "openedWindows": []
+    }
+}

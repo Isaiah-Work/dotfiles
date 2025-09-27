@@ -1,0 +1,23 @@
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 18.0
+
+[font.bold]
+family = "JetBrainsMono Nerd Font Mono"
+style = "Bold"
+
+[font.bold_italic]
+family = "JetBrainsMono Nerd Font Mono"
+style = "Bold Italic"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font Mono"
+style = "Italic"
+
+[font.normal]
+# Usa el nombre que encontraste: JetBrainsMono Nerd Font Mono
+family = "JetBrainsMono Nerd Font Mono"
+style = "Regular"
+
