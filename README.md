@@ -37,7 +37,7 @@ Este repositorio contiene la configuración completa de mi entorno de escritorio
 
 2.  **Clonar el Repositorio:**
     ```bash
-    git clone [https://github.com/Isaiah-Work/dotfiles.git](https://github.com/Isaiah-Work/dotfiles.git) ~/Dotfiles
+    git clone https://github.com/Isaiah-Work/dotfiles.git ~/Dotfiles
     cd ~/Dotfiles
     ```
 
