@@ -12,27 +12,41 @@ Este repositorio contiene la configuración completa de mi entorno de escritorio
 | **Compositor** | `.config/picom/picom.conf` | Añade los efectos visuales modernos: **sombras**, **transparencia** y **esquinas redondeadas**. |
 | **Barra de Estado** | `.config/polybar/` | Una barra de estado minimalista y elegante. Muestra información dinámica del sistema (audio, CPU, batería). |
 | **Lanzador** | `.config/rofi/` | Un menú de aplicaciones rápido y con búsqueda, sustituyendo a Dmenu. |
-| **Terminal** | `alacritty` (dependencia) | Emulador de terminal de alto rendimiento y acelerado por GPU. |
+| **Terminal** | `kitty` (dependencia) | Emulador de terminal de alto rendimiento y acelerado por GPU. |
 
 ---
 
 ## 🛠️ Guía de Instalación Rápida
 
-Para replicar este entorno, simplemente clona el repositorio y usa el *script* de instalación incluido:
+1.  **Instalar Dependencias Iniciales:**
 
-1.  **Clonar el Repositorio:**
+    Necesitarás `git`, `wget` y `curl` para descargar el repositorio y el instalador de Oh My Zsh.
+
+    ```bash
+    # Distribuciones basadas en Debian/Ubuntu
+    sudo apt update
+    sudo apt install git wget curl
+
+    # Distribuciones basadas en Fedora/CentOS
+    sudo dnf update
+    sudo dnf install git wget curl
+
+    # Distribuciones basadas en Arch/Manjaro
+    sudo pacman -Syu git wget curl
+    ```
+
+2.  **Clonar el Repositorio:**
     ```bash
     git clone [https://github.com/Isaiah-Work/dotfiles.git](https://github.com/Isaiah-Work/dotfiles.git) ~/Dotfiles
     cd ~/Dotfiles
     ```
 
-2.  **Ejecutar el Instalador:**
+3.  **Ejecutar el Instalador:**
     ```bash
     chmod +x install.sh
     ./install.sh
     ```
-    El script se encarga de instalar las dependencias principales (`i3`, `picom`, `rofi`, etc.) y de crear los enlaces simbólicos (*symlinks*) en tu carpeta `~/.config/` para que el sistema utilice estos archivos.
-
+    El script se encargará de instalar el resto de dependencias y de crear los enlaces simbólicos (*symlinks*) en tu carpeta `~/.config/`.
 ---
 
 ## 👏 Agradecimientos y Referencias
