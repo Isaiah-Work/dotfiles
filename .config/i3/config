@@ -71,7 +71,7 @@ set $ws10 "10"
 
 
 #######################################################################
-## 5. ATOMIZACIÓN DEL SISTEMA (Volume, Brightness)
+## 5. ATOMIZACIÓN DEL SISTEMA (Volume, Brightness, Capturas de pantalla)
 #######################################################################
 
 # Comando para refrescar la barra de estado (Polybar/i3status)
@@ -87,13 +87,14 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 bindsym XF86MonBrightnessDown exec brightnessctl -d intel_backlight set 5%-
 bindsym XF86MonBrightnessUp exec brightnessctl -d intel_backlight set +5%
 
+bindsym Print exec "flameshot gui"
 
 #######################################################################
 ## 6. LANZADORES DE PROGRAMAS
 #######################################################################
 
 # Terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec kitty 
 
 # Lanzador de Aplicaciones (Rofi)
 bindsym $mod+space exec rofi -show drun

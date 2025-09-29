@@ -1,4 +1,0 @@
-2025-09-27 11:32:23.541 [info] Started local extension host with pid 9796.
-2025-09-27 11:32:24.581 [info] Settings Sync: Account status changed from uninitialized to unavailable
-2025-09-27 11:32:26.229 [error] Error while getting the latest version for the extension esbenp.prettier-vscode from https://marketplace.visualstudio.com/_apis/public/gallery/vscode/{publisher}/{name}/latest. Trying the fallback https://www.vscode-unpkg.net/_gallery/{publisher}/{name}/latest Failed
-2025-09-27 11:32:26.289 [info] [perf] Render performance baseline is 27ms

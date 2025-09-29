@@ -10,7 +10,8 @@ PACKAGES=(
     picom                          # Compositor
     polybar                        # Barra de estado
     rofi                           # Lanzador de aplicaciones
-    alacritty                      # Terminal
+    kitty                      # Terminal
+    zsh                            # Shell
     feh                            # Fondo de pantalla
     i3lock                         # Bloqueo de pantalla
     brightnessctl                  # Control de brillo
@@ -42,9 +43,38 @@ echo "Iniciando instalación en $(awk -F= '/^NAME/{print $2}' /etc/os-release)..
 echo "Instalando paquetes del sistema..."
 $INSTALL_CMD "${PACKAGES[@]}"
 
-# --- 3. INSTALACIÓN DE FUENTES (Ejemplo para JetBrains Mono Nerd Font) ---
+
+# --- 3. INSTALACIÓN DE ZSH Y OH MY ZSH ---
+echo "Instalando Oh My Zsh..."
+
+# 1. Instalar OMZ (usando el método curl)
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+    echo "Oh My Zsh instalado."
+else
+    echo "Oh My Zsh ya parece estar instalado."
+fi
+
+# 2. Cambiar el shell por defecto
+if [ "$SHELL" != "/usr/bin/zsh" ] && [ "$SHELL" != "/bin/zsh" ]; then
+    chsh -s "$(which zsh)"
+    echo "Shell por defecto cambiado a Zsh. Necesitarás reiniciar la sesión."
+fi
+
+# --- 4. CREACIÓN DEL SYMLINK PARA .zshrc ---
+echo "Creando enlace simbólico para .zshrc..."
+
+if [ -f "$HOME/.zshrc" ] && [ ! -L "$HOME/.zshrc" ]; then
+    echo "Copia de seguridad de ~/.zshrc a ~/.zshrc.bak"
+    mv "$HOME/.zshrc" "$HOME/.zshrc.bak"
+fi
+
+# Crea el symlink del archivo .zshrc
+ln -sfn "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
+echo "Enlace creado para .zshrc."
+
+# --- 5. INSTALACIÓN DE FUENTES (Ejemplo para JetBrains Mono Nerd Font) ---
 echo "Verificando e instalando fuentes esenciales (JetBrains Mono Nerd Font)..."
-# Nota: La instalación de fuentes puede variar. Este es un ejemplo simple de descarga.
 FONT_DIR="$HOME/.local/share/fonts"
 mkdir -p "$FONT_DIR"
 FONT_URL="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip"
@@ -60,7 +90,7 @@ else
 fi
 
 
-# --- 4. CONFIGURACIÓN DE DOTFILES (ENLACES SIMBÓLICOS) ---
+# --- 6. CONFIGURACIÓN DE DOTFILES (ENLACES SIMBÓLICOS) ---
 
 echo "Creando enlaces simbólicos para la configuración..."
 DOTFILES_DIR=$(pwd) # Obtiene el directorio actual (~/Dotfiles)
@@ -70,7 +100,7 @@ CONFIG_DIR="$HOME/.config"
 mkdir -p "$CONFIG_DIR"
 
 # Lista de carpetas a enlazar (Symlinks)
-FOLDERS=("i3" "picom" "polybar" "rofi" "alacritty")
+FOLDERS=("i3" "picom" "polybar" "rofi" "kitty")
 
 for FOLDER in "${FOLDERS[@]}"; do
     # Verifica si ya existe una configuración, si es así, la respalda o la borra

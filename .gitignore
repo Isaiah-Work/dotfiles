@@ -1,2 +1,11 @@
 .config/polybar/temp
 *.swp
+
+# Directorios de caché y datos de sesión de VSCode
+.config/Code/Backups/
+.config/Code/Cache/
+.config/Code/CachedData/
+.config/Code/User/globalStorage/
+.config/Code/User/History/
+.config/Code/User/workspaceStorage/
+.config/Code/User/Browser/
